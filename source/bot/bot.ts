@@ -29,6 +29,9 @@ export class TelegramBot {
   }
 
   public launch(): void {
+    this.methods.setMyCommands(commandsHandler.getBotCommands())
+    
+
     this.listenStartCommand()
     this.listenGetCommand()
 
